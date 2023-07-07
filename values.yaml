@@ -3,6 +3,11 @@ elasticsearch:
   host: "elasticsearch-service"
   port: 9200
   protocol: "http"
+  settings:
+    index:
+      number_of_replicas: 0
+      number_of_shards: 5
+      refresh_interval: "1m"
 
 canary:
   elasticsearch:

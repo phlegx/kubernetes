@@ -125,7 +125,10 @@ their default values. See values.yaml for all available options.
 | `elasticsearch.host`                   | Elasticsearch hostname                      | `elasticsearch-service`                                              |
 | `elasticsearch.port`                   | Elasticsearch access port                   | `9200`                                              |
 | `elasticsearch.protocol`               | Elasticsearch access protocol               | `http`                                              |
-| `elasticsearch.auth`                   | Elasticsearch authentication `user:pass`    | `-`                                              |
+| `elasticsearch.auth`                   | Elasticsearch authentication `user:pass`    | `-`                                                 |
+| `elasticsearch.settings.index.number_of_replicas` | Elasticsearch replicas per index | `0`									             |
+| `elasticsearch,settings.index.number_of_shards` | Elasticsearch number of shards per index | `5`                                           |
+| `elasticsearch.settings.index.refresh_interval` | Elasticsearch index refresh interval | `1m`									             |
 | `pip.enabled`                          | Whether to enable pip service               | `true`                                              |
 | `pip.host`                             | Pip service url                             | `http://pelias-pip-service:3102/`                   |
 | `pip.pvc.create`                       | To use a custom PVC                         | `-`                                                 |

@@ -18,9 +18,9 @@ data:
       "elasticsearch": {
         "settings": {
           "index": {
-            "number_of_replicas": "0",
-            "number_of_shards": "12",
-            "refresh_interval": "1m"
+            "number_of_replicas": "{{ .Values.elasticsearch.settings.index.number_of_replicas | default "0" }}",
+            "number_of_shards": "{{ .Values.elasticsearch.settings.index.number_of_shards | default "5" }}",
+            "refresh_interval": "{{ .Values.elasticsearch.settings.index.refresh_interval | default "1m"  }}"
           }
         }
       },
